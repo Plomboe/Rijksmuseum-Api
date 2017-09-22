@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rijksmuseum's Art Pieces</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Rijksmuseum's Art Pieces</h1>
+      <h3 id="page-title"><span>Monkeys</span></h3>
+      <label for="animal">Choose your animal:</label>
+      <select name="animal" id="animal-select">
+        <option value="monkey">Monkeys</option>
+        <option value="eagle">Eagles</option>
+        <option value="dragon">Dragons</option>
+        <option value="elephant">Elephants</option>
+        <option value="centaur">Centaur</option>
+      </select>
+      <br><br>
+      <label for="input">Search for a piece: </label>
+      <input type="text" placeholder="Search" id="input">
+      <button type="submit" class="btn btn-default" id="search">search</button> 
+    </div>
+  </header>
+  <main>
+    <div class="container" id="artwork"></div>
+  </main>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
