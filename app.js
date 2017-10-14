@@ -45,7 +45,7 @@ artApp.getPieces = function(query){
       ps: 100,
     },
     dataType: "jsonp",
-    //If it successfully returns(200 status), display the images
+    //If it successfully returns(200 status), display the pieces
     success: function(result){
       $("#artwork").empty();
       artApp.displayPieces(result.artObjects);
@@ -58,8 +58,8 @@ artApp.displayPieces = function(data){
   $.each(data, function(i, piece){
     var image = $("<img>").attr("src", piece.webImage.url);
     var title = $("<h2>").text(piece.title);
-    var artist = $("<p>").addClass("artist").text(piece.principalOrFirstMaker);
-    var artPiece = $("<div>").addClass("piece").append(image, title, artist);
+    var longTitle = $("<p>").addClass("artist").text(piece.longTitle);
+    var artPiece = $("<div>").addClass("piece").append(image, title, longTitle);
     $("#artwork").append(artPiece);
   });
 };
